@@ -1,0 +1,46 @@
+.App {
+  
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar{
+margin: 20px;
+width: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.form-container{
+  padding-top: 50px;
+  width: 400px;
+  margin: auto;
+
+  }
+  .home{
+  margin-top: 100px;
+  background-image: url("../public/images/anime.jpg");
+  height: 30vh;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  }
