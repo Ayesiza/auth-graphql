@@ -1,9 +1,8 @@
 .App {
   
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
+  align-content: center;
+  
 }
 
 .nav-bar{
@@ -38,9 +37,18 @@ width: 50%;
   }
   .home{
   margin-top: 100px;
-  background-image: url("../public/images/anime.jpg");
+  /* background-image: url("../public/images/anime.jpg"); */
   height: 30vh;
   object-fit: cover;
   background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
   }
+
+.login-form{
+ width: 100%;
+ max-width: 430px;
+ padding: 15px;
+ margin: auto;
+ height: 100%;
+}

@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Form, Button} from 'semantic-ui-react'
+import React from 'react'
+import {Form, Button} from 'react-bootstrap'
 import { useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag';
 
@@ -15,8 +15,6 @@ const { onChange, onSubmit, values} = useForm(registerUser,{
     confirmPassword:'',
    
 })  
-
-
 
 const [addUser, {loading}] = useMutation(REGISTER_USER, {
  update(_,results){
@@ -34,7 +32,9 @@ function registerUser(){
   return (
     <div className='form-container'>
         <Form onSubmit={onSubmit} noValidate className={loading? 'loading':''}>
-            <Form.Input
+            <Form.Group>
+            <Form.Label>UserName</Form.Label>
+            <Form.Control
              label='Username'
              placeholder="Username"
              type='text'
@@ -43,7 +43,11 @@ function registerUser(){
              onChange={onChange}
              errors={ errors.username ? true : false}
             />
-             <Form.Input
+            </Form.Group>
+           
+            <Form.Group>
+            <Form.Label>UserName</Form.Label>
+            <Form.Control
              label='Email'
              placeholder="Email"
              type='email'
@@ -52,24 +56,35 @@ function registerUser(){
              onChange={onChange}
              errors={ errors.email ? true : false}
             />
-             <Form.Input
-            label='Password'
-            placeholder="Password"
-            type='password'
-            name="password"
-            value={values.password}
-            onChange={onChange}
-            errors={ errors.password ? true : false}
-           /> 
-           <Form.Input
-           label='ConfirmPassword'
-           placeholder="ConfirmPassword"
+            </Form.Group>
+           
+            <Form.Group>
+            <Form.Label>UserName</Form.Label>
+            <Form.Control
+           label='Password'
+           placeholder="Password"
            type='password'
-           name="confirmPassword"
-           value={values.confirmPassword}
+           name="password"
+           value={values.password}
            onChange={onChange}
-           errors={ errors.username ? true : false}
-          />
+           errors={ errors.password ? true : false}
+            />
+            </Form.Group>
+
+            <Form.Group>
+            <Form.Label>UserName</Form.Label>
+            <Form.Control
+          label='ConfirmPassword'
+          placeholder="ConfirmPassword"
+          type='password'
+          name="confirmPassword"
+          value={values.confirmPassword}
+          onChange={onChange}
+          errors={ errors.username ? true : false}
+            />
+            </Form.Group>
+             
+          
         <Button type='submit' primary>Register</Button> 
         </Form>
         { Object.keys(errors).length > 0 && (

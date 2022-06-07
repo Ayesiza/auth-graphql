@@ -7,7 +7,7 @@
 ` npm run serve`
 # Run Client
 ` npm start`
-** Both client and server must be running to fetch data from bck end
+** Both client and server must be running to fetch data from sever side
 # To login
 ` username: userAdmin`
 `password: 12345`
